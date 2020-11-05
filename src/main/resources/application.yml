@@ -24,6 +24,18 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path= /mypages/**
+        - id: regrequest
+          uri: http://localhost:8085
+          predicates:
+            - Path=/regRequests/**
+        - id: approval
+          uri: http://localhost:8086
+          predicates:
+            - Path=/approves/**
+        - id: pubview
+          uri: http://localhost:8087
+          predicates:
+            - Path= /publpages/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -59,6 +71,18 @@ spring:
           uri: http://customerview:8080
           predicates:
             - Path= /mypages/**
+        - id: regrequest
+          uri: http://regrequest:8080
+          predicates:
+            - Path=/regRequests/**
+        - id: approval
+          uri: http://approval:8080
+          predicates:
+            - Path=/approves/**
+        - id: pubview
+          uri: http://pubview:8080
+          predicates:
+            - Path= /publpages/**
       globalcors:
         corsConfigurations:
           '[/**]':
